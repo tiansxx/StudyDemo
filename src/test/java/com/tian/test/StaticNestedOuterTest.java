@@ -13,6 +13,9 @@ public class StaticNestedOuterTest {
 		StaticNested staticNested = new StaticNestedOuter.StaticNested();
 		staticNested.printNested();
 		
+		StaticNested sn = new StaticNested();
+		sn.printNested();
+		
 		
 	}
 	

@@ -22,8 +22,8 @@ public class Person implements Cloneable {
 		this.name = name;
 	}
 	
-	@Override
-	protected Object clone() throws CloneNotSupportedException {
+//	@Override
+//	protected Object clone() throws CloneNotSupportedException {
 //		return (Person) super.clone(); //浅克隆
 		
 //		Person person = (Person) super.clone();
@@ -31,11 +31,18 @@ public class Person implements Cloneable {
 //		person.setName(name);
 //		return person;
 		
-		Person person = (Person) super.clone();
-		Name name = (Name) this.name.clone();
-		person.setName(name);
-		return person;
+//		Person person = (Person) super.clone();
+//		Name name = (Name) this.name.clone();
+//		person.setName(name);
+//		return person;
 		
+//	}
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		 Person person = (Person) super.clone();
+		 person.name = (Name) this.name.clone();
+		 return person;
 	}
 	@Override
 	public String toString() {

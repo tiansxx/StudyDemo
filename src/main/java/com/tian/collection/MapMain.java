@@ -25,5 +25,10 @@ public class MapMain {
 //		java.util.HashMap.Values -> java.util.HashMap.ValueIterator
 		Iterator<String> valItr = values.iterator();	
 		
+		Map<String, String> m = MapMain.newInstance();
+	}
+	
+	static <K, V> HashMap<K, V> newInstance() {
+		return new HashMap<K, V>();
 	}
 }
