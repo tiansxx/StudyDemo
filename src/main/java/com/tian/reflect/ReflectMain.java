@@ -29,6 +29,7 @@ public class ReflectMain {
 		
 		Method method2 = cls.getMethod("print", String.class);
 		method2.invoke(instance, "test");
+		System.out.println(method2.getName());
 	}
 	
 	public static void reflect2() throws NoSuchMethodException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InstantiationException {
