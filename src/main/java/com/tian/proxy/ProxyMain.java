@@ -17,6 +17,8 @@ public class ProxyMain {
 		System.out.println("Is a proxy class ? " + Proxy.isProxyClass(obj.getClass()));
 		Hello proxyHello = (Hello) obj;
 		proxyHello.hello();
+		
+		ProxyUtils.generateClassFile(hello.getClass(), "HelloImplProxy");
 	}
 	
 	static void cglibProxy() {
