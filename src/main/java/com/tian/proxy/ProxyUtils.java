@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import sun.misc.ProxyGenerator;
 
+@SuppressWarnings("restriction")
 public class ProxyUtils {
 
 	/*
@@ -13,7 +14,6 @@ public class ProxyUtils {
 	 * params :clazz 需要生成动态代理类的类
 	 * proxyName : 为动态生成的代理类的名称
 	 */
-	@SuppressWarnings("restriction")
 	public static void generateClassFile(Class<?> clazz,String proxyName)
 	{
 		//根据类信息和提供的代理类名称，生成字节码

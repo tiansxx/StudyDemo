@@ -5,9 +5,9 @@ import net.sf.cglib.proxy.Proxy;
 public class ProxyMain {
 
 	public static void main(String[] args) {
-		HelloImpl hello = new HelloImpl();
-		jdkProxy(hello);
-//		cglibProxy();
+//		HelloImpl hello = new HelloImpl();
+//		jdkProxy(hello);
+		cglibProxy();
 	}
 	
 	static void jdkProxy(HelloImpl hello) {
@@ -25,6 +25,8 @@ public class ProxyMain {
 		CglibProxy proxy = new CglibProxy();
 		SayHello target = (SayHello) proxy.getProxy(SayHello.class);
 		target.hello();
+		
+		ProxyUtils.generateClassFile(target.getClass(), "SayHelloCglibProxy");
 	}
 	
 	
