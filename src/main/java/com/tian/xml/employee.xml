@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+	<employee>
+		<id>1</id>
+		<name value="tian"></name>
+		<salary type="CNY">100000</salary>
+	</employee>
+	
+	<!-- <employee>
+		<id value="2" />
+		<name>sxx</name>
+		<salary type="USD">200000</salary>
+	</employee> -->
+</company>

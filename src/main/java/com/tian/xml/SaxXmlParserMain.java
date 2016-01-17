@@ -9,11 +9,14 @@ import javax.xml.parsers.SAXParserFactory;
  *
  */
 
-public class XmlParserMain {
+public class SaxXmlParserMain {
 
 	public static void main(String[] args) throws Exception {
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 		SAXParser parser = factory.newSAXParser();
-		parser.parse(XmlParserMain.class.getResourceAsStream("file.xml"), new XmlHandler());
+		
+		Employee bean = new Employee();
+		parser.parse(SaxXmlParserMain.class.getResourceAsStream("employee.xml"), new SaxXmlHandler(bean));
+		System.out.println(bean);
 	}
 }
