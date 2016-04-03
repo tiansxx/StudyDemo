@@ -1,4 +1,4 @@
-package com.tian.thread;
+package com.tian.thread.test;
 
 public class TraditionalThreadCommunication {
 

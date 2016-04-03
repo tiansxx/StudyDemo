@@ -18,7 +18,8 @@ public class SerializableMain {
 		serializableMain.serialObject(name);
 		serializableMain.outputObject(name);
 	}
-
+	
+//	jdk的默认序列化后的对象占更多字节
 	void serialObject(Name name) throws IOException {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		ObjectOutputStream oos = new ObjectOutputStream(baos);
