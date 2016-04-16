@@ -9,7 +9,7 @@ public enum EnumType {
 	private String name;
 	private String price;
 	
-//	enum不支持public和protected修饰的构造方法，一定要用private的
+//	enum不支持public和protected修饰的构造方法，一定要用private的或默认的
 	private EnumType(String name, String price) {
 		this.name = name;
 		this.price = price;
