@@ -1,5 +1,15 @@
 package com.tian.enums;
 
+/**
+ * 
+ * @author tian
+ * 
+ * 状态模式应分为：Context(环境)/State(状态)
+ * Context包含状态引用
+ * State包含与状态相关的逻辑处理
+ * 
+ */
+
 public enum States implements State {
 	NEW {
 		@Override
