@@ -1,4 +1,4 @@
-package com.tian.designpattern;
+package com.tian.designpattern.observer;
 
 import java.util.Observable;
 import java.util.Observer;
