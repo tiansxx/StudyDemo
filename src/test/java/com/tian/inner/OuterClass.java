@@ -43,12 +43,19 @@ public class OuterClass {
 		
 	}
 	
+	private static class StaticInnerClass {
+		
+	}
+	
 	public static void main(String[] args) {
 		OuterClass outerClass = new OuterClass();
 		InnerClass inner = outerClass.inner();
 		while (inner.hasNext()) {
 			System.out.println(inner.next());
 		}
+		
+		new StaticInnerClass();
+		
 	}
 	
 }
