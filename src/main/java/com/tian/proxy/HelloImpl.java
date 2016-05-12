@@ -7,4 +7,10 @@ public class HelloImpl implements Hello {
 		System.out.println("Hello World");
 	}
 
+	@Override
+	public Object hello(String s) {
+		return "Hello " + s;
+	}
+
+
 }
