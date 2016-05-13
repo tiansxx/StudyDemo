@@ -1,5 +1,6 @@
 package com.tian.proxy;
 
+import net.sf.cglib.core.DebuggingClassWriter;
 import net.sf.cglib.proxy.Proxy;
 
 public class ProxyMain {
@@ -22,11 +23,12 @@ public class ProxyMain {
 	}
 	
 	static void cglibProxy() {
+//		指定代理类生成的存放位置
+		System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "I:\\");
 		CglibProxy proxy = new CglibProxy();
 		SayHello target = (SayHello) proxy.getProxy(SayHello.class);
 		target.hello();
-		
-		ProxyUtils.generateClassFile(target.getClass(), "SayHelloCglibProxy");
+//		ProxyUtils.generateClassFile(target.getClass(), "SayHelloCglibProxy");
 	}
 	
 	
