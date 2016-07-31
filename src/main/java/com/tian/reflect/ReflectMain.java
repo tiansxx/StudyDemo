@@ -8,8 +8,9 @@ public class ReflectMain {
 	
 	public static void main(String[] args) throws Exception {
 
-		reflect1();
+//		reflect1();
 //		reflect2();
+		reflect3();
 		
 //		Basic basic = new Basic();
 //		basic.print();
@@ -39,6 +40,14 @@ public class ReflectMain {
 		declaredMethod.setAccessible(true);
 		declaredMethod.invoke(Basic.class.newInstance(), "hello");
 		
+	}
+	
+	public static void reflect3() {
+//		获取所有的public方法,包括在父类中定义的
+		Method[] methods = ExtendedClass.class.getMethods();
+		for (Method method : methods) {
+			System.out.println(method.getName());
+		}
 	}
 	
 }
