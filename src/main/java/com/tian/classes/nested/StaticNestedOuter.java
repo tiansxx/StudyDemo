@@ -17,6 +17,7 @@ public class StaticNestedOuter {
 		char c2 = 'a';
 		
 		public void printNested() {
+			
 //			静态嵌套类不能访问外部类的非静态成员
 //			System.out.println(i);	
 //			printOuter();

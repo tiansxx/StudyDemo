@@ -1,5 +1,7 @@
 package com.tian.test;
 
+import java.util.Arrays;
+
 public class StringTest {
 	
 	public static void main(String[] args) {
@@ -9,6 +11,10 @@ public class StringTest {
 		System.out.println("".equals(s));
 		System.out.println(null == s);
 		System.out.println("\r\n".equals(s));
+		
+		String str = "$$a$$$$b";
+		String[] sa = str.split("\\$\\$");
+		System.out.println(Arrays.deepToString(sa));
 		
 	}
 	

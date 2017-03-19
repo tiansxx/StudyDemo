@@ -7,7 +7,15 @@ import java.io.InputStreamReader;
 public class RuntimeDemo {
 
 	public static void main(String[] args) throws Exception {
-		invokeBat();
+//		invokeBat();
+		listStackTrace();
+	}
+	
+	static void listStackTrace() {
+		StackTraceElement[] stackTrace = new RuntimeException().getStackTrace();
+		for (StackTraceElement stackTraceElement : stackTrace) {
+			System.out.println(stackTraceElement.getClassName() + "\t" + stackTraceElement.getMethodName());
+		}
 	}
 	
 	static void invokeBat() throws IOException {

@@ -2,6 +2,12 @@ package com.tian.time;
 
 import java.util.Calendar;
 
+/**
+ * Java 7 API
+ * @author tian
+ *
+ */
+
 public class CalendarDemo {
 
 	public static void main(String[] args) {
