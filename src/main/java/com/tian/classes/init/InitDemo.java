@@ -9,13 +9,13 @@ package com.tian.classes.init;
 
 public class InitDemo {
 	
-	static {
-		System.out.println("static code init demo");
-	}
-	
-	public InitDemo() {
-		System.out.println("init demo.");
-	}
+//	static {
+//		System.out.println("static code init demo");
+//	}
+//	
+//	public InitDemo() {
+//		System.out.println("init demo.");
+//	}
 	
 	public static void main(String[] args) throws Exception {
 		init();
@@ -32,7 +32,7 @@ public class InitDemo {
 		Class.forName("com.tian.classes.init.InitDemo", false, ClassLoader.getSystemClassLoader());
 	}
 	
-	public static void init() {
+	public static void init() throws ClassNotFoundException {
 		//执行静态代码块,不会初始化静态变量
 //		ExtenedDemo.print();
 //		ExtenedDemo.print();
@@ -40,8 +40,11 @@ public class InitDemo {
 		//执行静态代码块,且初始化静态变量
 //		new ExtenedDemo("test", "testinit");
 		
-		AbstractParent.print();
+//		AbstractParent.print();
+//		ExtenedDemo.print();
 		
+		Class.forName("com.tian.classes.init.ExtenedDemo");
+		ExtenedDemo.print();
 	}
 	
 }
