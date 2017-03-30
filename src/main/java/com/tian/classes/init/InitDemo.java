@@ -40,11 +40,11 @@ public class InitDemo {
 		//执行静态代码块,且初始化静态变量
 //		new ExtenedDemo("test", "testinit");
 		
-//		AbstractParent.print();
+		AbstractParent.print();
+//		调用父类静态方法,不会初始化子类
 //		ExtenedDemo.print();
 		
-		Class.forName("com.tian.classes.init.ExtenedDemo");
-		ExtenedDemo.print();
+//		Class.forName("com.tian.classes.init.ExtenedDemo");
 	}
 	
 }

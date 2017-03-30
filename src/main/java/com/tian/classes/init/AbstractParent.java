@@ -11,12 +11,17 @@ import java.util.Map;
 public abstract class AbstractParent {
 	
 	private String desc;
+	private static final Map<String, AbstractParent> codeMap = new HashMap<>();
 	
 	static {
 		System.out.println("static parent");
+		try {
+			Class.forName("com.tian.classes.init.ExtenedDemo");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 	
-	private static final Map<String, AbstractParent> codeMap = new HashMap<>();
 	
 	public AbstractParent(String desc) {
 		this.desc = desc;
