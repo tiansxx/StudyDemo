@@ -1,7 +1,9 @@
 package com.tian.reflect;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.nio.ByteBuffer;
 
 public class ReflectMain {
 
@@ -10,7 +12,8 @@ public class ReflectMain {
 
 //		reflect1();
 //		reflect2();
-		reflect3();
+//		reflect3();
+		reflect4();
 		
 //		Basic basic = new Basic();
 //		basic.print();
@@ -47,6 +50,23 @@ public class ReflectMain {
 		Method[] methods = ExtendedClass.class.getMethods();
 		for (Method method : methods) {
 			System.out.println(method.getName());
+		}
+	}
+	
+	/**
+	 * Netty DirectByteBuf GC
+	 */
+	public static void reflect4()
+	{
+		 ByteBuffer direct = ByteBuffer.allocateDirect(1);
+		 try {
+			 Field cleanerField = direct.getClass().getDeclaredField("cleaner");
+			 cleanerField.setAccessible(true);
+			 Object cleaner = cleanerField.get(direct);
+			 Method clean = cleaner.getClass().getDeclaredMethod("clean");
+			 clean.invoke(cleaner);
+		 } catch (Exception e) {
+			 e.printStackTrace();
 		}
 	}
 	
