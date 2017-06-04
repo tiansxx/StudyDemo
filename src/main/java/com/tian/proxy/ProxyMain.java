@@ -6,9 +6,9 @@ import net.sf.cglib.proxy.Proxy;
 public class ProxyMain {
 
 	public static void main(String[] args) {
-//		HelloImpl hello = new HelloImpl();
-//		jdkProxy(hello);
-		cglibProxy();
+		HelloImpl hello = new HelloImpl();
+		jdkProxy(hello);
+//		cglibProxy();
 	}
 	
 	static void jdkProxy(HelloImpl hello) {
