@@ -1,0 +1,6 @@
+Java 序列化和反序列化
+当类实现了Serializable时，如果没有指定serialVersionUID，Java在序列化对象时根据对象的属性默认会生成一个serialVersionUID
+反序列化时，根据serialVersionUID反序列化对象
+此时如果修改了对象的属性，则反序列化不能成功
+
+如果手动指定了serialVersionUID，则序列化和反序列化时都根据改id来，即使修改了类的属性，也不会导致反序列化失败
