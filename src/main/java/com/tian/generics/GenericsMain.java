@@ -19,6 +19,14 @@ public class GenericsMain {
 		ls.add("1");
 		ls.add(1);
 //		printList(ls);
+		
+		//泛型只在编译时存在,运行时擦除
+		List<String> ll = new ArrayList<>();
+		System.out.println(ll.getClass());
+		System.out.println(new ArrayList<String>().getClass());
+		List<Integer> li = new ArrayList<>();
+		System.out.println(li.getClass());
+		System.out.println(new ArrayList<Integer>().getClass());
 	}
 	
 	static void printList(List<?> list) {

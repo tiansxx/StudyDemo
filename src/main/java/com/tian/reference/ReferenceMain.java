@@ -18,6 +18,7 @@ public class ReferenceMain {
 		* 程序中没有这些对象的强引用那么在JVM还没有out of memory的时候就不会回收,也就不会执行finalize()方法。 
         */  
 		SoftReference<RefDemo> softRef = new SoftReference<ReferenceMain.RefDemo>(new RefDemo("soft demo1"));
+		System.out.println("before gc soft:" + softRef.get());
 		
 		/*
 		 * WeakReference中封装的对象.
@@ -38,6 +39,13 @@ public class ReferenceMain {
 		
 		System.gc();
 		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("after gc soft:" + softRef.get());
 		System.out.println("after gc weak:" + weakRef.get());
 	}
 	

@@ -64,7 +64,7 @@ public class ResourceLoaderDemo {
 		Properties props = new Properties();
 		try {
 			props.load(resourceAsStream);
-			System.out.println("=============== " + props.getProperty("name"));
+			System.out.println(i + "\t=============== " + props.getProperty("name"));
 		} catch (IOException e) {
 //			e.printStackTrace();
 			System.err.println("******Exception********* " + i);

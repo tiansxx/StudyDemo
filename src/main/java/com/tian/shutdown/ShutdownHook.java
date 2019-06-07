@@ -13,7 +13,7 @@ public class ShutdownHook implements Runnable {
 	public void run() {
 		System.out.println("CurrentTime: " + System.currentTimeMillis());
 		try {
-			TimeUnit.SECONDS.sleep(1000);
+			TimeUnit.MILLISECONDS.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
